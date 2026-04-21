@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+{% extends "base.html" %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<div class="dashboard-container">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    {% for category, message in messages %}
+      <p class="{{ category }}">{{ message }}</p>
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+
+    <h1>Welcome, {{ user }} 🎉</h1>
+
+    <p>You are successfully logged in to your system.</p>
+    <a class="btn" href="/profile">View Profile</a>
+
+    <div class="card">
+        <p>Status: Logged In ✔</p>
+    </div>
+
+    <a class="btn" href="/logout">Logout</a>
+
+</div>
+{% endblock %}
+
+</body>
+</html>
