@@ -50,16 +50,6 @@ flask_project/
 └── static/
 └── style.css
 
-## ⚙️ How to Run Locally
-
-```bash
-git clone https://github.com/your-username/flask-auth-system.git
-cd flask-auth-system
-pip install flask werkzeug
-python app.py
-Then open:
-http://127.0.0.1:5000
-
 💡 What I Learned
 Flask routing & backend structure
 Session management
@@ -70,3 +60,13 @@ Debugging real deployment issues
 
 ##AUTHOR
 Techy-Ahmad
+
+## ⚙️ How to Run Locally
+
+```bash
+git clone https://github.com/your-username/flask-auth-system.git
+cd flask-auth-system
+pip install flask werkzeug
+python app.py
+Then open:
+http://127.0.0.1:5000
