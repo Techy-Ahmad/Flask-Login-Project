@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Profile</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+{% extends "base.html" %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<div class="container">
+
+    <h2>👤 User Profile</h2>
+
+    <p><b>User ID:</b> {{ user[0] }}</p>
+    <p><b>Username:</b> {{ user[1] }}</p>
+    <p><b>Joined:</b> {{ user[2] }}</p>
+
+    <a class="btn" href="/dashboard">Back</a>
+    <a class="btn" href="/logout">Logout</a>
+    <a class="btn" href="/edit-profile">Edit Profile</a>
+   <a href="/delete-account" style="color:red;">
+    Delete Account
+</a>
+
+</div>
+{% endblock %}
+
+</body>
+</html>
