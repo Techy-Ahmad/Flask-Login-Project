@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delete Account</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+{% extends "base.html" %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<div class="container">
+
+    <h2>Delete Account ⚠️</h2>
+
+    <p style="color: red; font-size: 13px;">
+        Type <b>DELETE</b> to permanently remove your account
+    </p>
+
+    <form method="POST">
+
+        <input type="text" name="confirm" placeholder="Type DELETE" required>
+
+        <button type="submit" style="background:red;">
+            Delete My Account
+        </button>
+
+    </form>
+
+    <a href="/profile">Cancel</a>
+
+</div>
+{% endblock %}
+
+</body>
+</html>
